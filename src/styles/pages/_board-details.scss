@@ -1,0 +1,31 @@
+.board-details {
+    max-height: 100vh;
+    // margin-left: 50px;
+    // min-width: fit-content;
+    overflow: scroll;
+    hr{
+        border-top: 1px solid rgb(233, 233, 233);
+    }
+    .trello-list{
+        margin-left: 30px;
+    }
+    .switch-color-bg{
+        margin: 7px;
+        margin-left: 30px;
+    }
+}
+.loader-img{
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 500px;
+    }
+}
+
+.activity-log{
+    display: grid;
+    grid-template-columns: 100px 200px 50px 140px;
+    gap: 10px;   
+}

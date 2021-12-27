@@ -1,0 +1,147 @@
+.person-picker {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &:hover {
+    .plus-btn {
+      display: flex;
+    }
+  }
+  .plus-btn {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 10px;
+    border-radius: 50%;
+    font-size: rem(17px);
+    color: #fff;
+    background-color: #0073ea;
+    display: none;
+  }
+  .empty-person{
+    width: 28px;
+    height: 28px;
+  }
+  .avatars {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .avatar {
+      width: 28px;
+      height: 28px;
+      margin: 0px -5px;
+      img{
+          border-radius: 50%;
+      }
+    }
+  }
+  
+  .person-picker-popover {
+      // reference button
+      .popover-btn {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 100;
+          background-color: transparent;
+          border: none;
+        }
+        
+    }
+    
+}
+
+.el-popover {
+    
+    .assigned-persons {
+        display: flex;
+        flex-wrap: wrap;
+        .assigned-person {
+            display: flex;
+            align-items: center; 
+            background-color: #e5f4ff;  
+            border-radius: 10px;
+            padding-inline-end: 10px;
+            margin-bottom: 2px;
+            margin-inline-end: 2px;
+            img{
+                border-radius: 50%;
+            }
+            .person-img {
+                width: 22px;
+                height: 22px;
+            }
+            .person-name {
+                font-size: rem(12px);
+                padding: 0 5px;
+            }
+            .remove-person-btn {
+                font-size: rem(12px);
+                padding: 0 2px;
+                margin: 2px;
+                border-radius: 10px;
+                &:hover {
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }   
+    .title {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 5px 0;
+        &::before {
+            content: "";
+            height: 1px;
+            background-color: #b3b3b3;
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 9px;
+        }
+        .title-txt {
+            z-index: 300;
+            background-color: #fff;
+            padding: 0 10px;
+            color: #606266;
+            
+        }
+    }
+    .persons-to-pick {
+        display: flex;
+        flex-direction: column;
+
+        .person-to-pick {
+            display: flex;
+            align-items: center; 
+            padding: 5px 0 5px 5px;
+            border-radius: 5px;
+            &:hover {
+                background-color: #0073ea;
+                color: #fff;
+                cursor: pointer;
+            }
+            img{
+
+                border-radius: 50%;
+            }
+            .person-img {
+                width: 25px;
+                height: 25px;
+            }
+            .person-name {
+                font-size: rem(13px);
+                padding: 0 5px;
+            }
+        }
+    }
+}

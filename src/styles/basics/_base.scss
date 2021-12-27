@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+    color: $clr2;
+    line-height: 1.8;
+    overflow: overlay;
+}
+
+body {
+    margin: 0;
+    background-size: 400px;
+    // background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin: 0 0 1rem;
+}
+
+h1 {
+    font-size: rem(60px);
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    margin: 0 0 1rem;
+    max-width: 60ch;
+}
+.menu-btn{
+    background-color: transparent;
+    width: 40px;
+    height: 100%;
+    border: none;
+    display: flex;
+  
+}

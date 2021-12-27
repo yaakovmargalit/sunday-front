@@ -1,0 +1,311 @@
+.group {
+  margin-bottom: 30px;
+
+  .group-titles {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) repeat(6, 200px) 30px;
+    font-size: rem(18px);
+    background-color: white;
+    grid-template-rows: 40px;
+
+    .coloums-titles {
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      align-self: center;
+      grid-auto-columns: minmax(200px, 200px);
+      .coloums-title {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        
+      }
+      .add-column {
+        justify-self: baseline;
+        padding-inline-start: 11px;
+      }
+    }
+    > :first-child {
+      font-size: rem(18px);
+      background-color: white;
+    }
+    > :not(:first-child) {
+      font-size: rem(14px);
+      justify-items: center;
+      text-align: center;
+    }
+  }
+  .group-items-container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    font-size: rem(13px);
+    .item-container {
+      display: grid;
+      grid-auto-columns: 1fr;
+      .item-preview {
+        display: grid;
+        grid-template-columns: minmax(320px, 1fr) repeat(6, 200px) 30px;
+        grid-template-rows: 34px;
+        font-size: rem(13px);
+        border-bottom: 0.1px solid #dfe8f3;
+        background-color: #f5f6f8;
+        &:hover {
+          background-color: #d8dadd;
+          cursor: pointer;
+        }
+        > :not(:first-child) {
+          text-align: center;
+        }
+        > :not(:last-child) {
+          border-right: 0.3px solid white;
+          border-right-color: white;
+          // border-right: 1px solid #ffffff;
+        }
+        .item-title-container {
+          position: sticky;
+          left: 0;
+          z-index: 1;
+        }
+        .new-msg-icon {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .new-msg-count {
+            position: absolute;
+            right: -2px;
+            bottom: -2px;
+            line-height: 10px;
+            font-size: 10px;
+            border-radius: 50%;
+            padding-inline:3px ;
+            padding-block: 1px;
+            color: white;
+            background-color: #1E90FF;
+          }
+        }
+      }
+    }
+  }
+  .sum {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) repeat(6, 200px) 30px
+
+
+  }
+  //   > li {
+  //     display: grid;
+  //     grid-auto-columns: 250px;
+  //     grid-auto-flow: column;
+  //     background-color: #f5f6f8; // change
+  //     align-items: stretch;
+  //     &:hover {
+  //       background-color: #e5e6e7;
+  //       cursor: pointer;
+  //     }
+  //     > * {
+  //       border: 1px solid #fefefe;
+  //       border-top-color: #fefefe;
+  //       border-bottom-color: #dfe8f3;
+  //       align-items: center;
+  //       align-items: center;
+  //     }
+  //   }
+  //   // group header
+  //   > :first-child {
+  //     grid-template-columns: 240px 1fr;
+  //     font-size: rem(18px);
+  //     background-color: white;
+  //     grid-template-rows: 40px;
+  //     > :first-child {
+  //       font-size: rem(18px);
+  //     }
+  //     > :not(:first-child) {
+  //       font-size: rem(14px);
+  //       justify-items: center;
+  //       text-align: center;
+  //     }
+  //   }
+  //   // group items, add line, sum
+  //   > :not(:first-child) {
+  //     font-size: rem(13px);
+  //     grid-template-rows: 34px;
+  //     > :not(:first-child) {
+  //       text-align: center;
+  //     }
+  //   }
+}
+
+.smooth-dnd-draggable-wrapper {
+  // overflow: unset;
+  overflow: unset !important;
+}
+
+.item-preview {
+  position: relative;
+  &:hover {
+    .item-menu-btn {
+      opacity: 1;
+    }
+  }
+
+  .group-color {
+    width: 8px;
+    height: 100%;
+    transition: width 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .input {
+      display: none;
+    }
+    .input:checked {
+      display: block;
+      width: 34px;
+    }
+
+    &:hover {
+      width: 34px;
+      .input {
+        display: block;
+      }
+    }
+  }
+  .group-color-open {
+    width: 34px;
+    .input {
+      display: block;
+    }
+  }
+  .item-title {
+    color: black !important;
+    background-color: rgba($color: #f5f6f8, $alpha: 0.9);
+
+    height: 100%;
+    .color-and-title {
+      height: 100%;
+    }
+    &:hover {
+      .edit-btn {
+        display: initial;
+      }
+    }
+    .title-and-btns {
+      gap: 5px;
+      padding-left: 6px;
+      input {
+        padding-left: 6px;
+        padding: 0px;
+        width: 100%;
+        height: 34px;
+        border: #f5f6f8 solid 1px;
+        outline: none;
+      }
+    }
+    .edit-btn {
+      background-color: #fff;
+      color: grey;
+      padding: 2px 8px;
+      border-radius: 10%;
+      display: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .delete-btn {
+      display: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .item-final-block {
+    border-right: 8px solid #e6e9ef;
+  }
+}
+
+.add-item {
+  opacity: 0.6;
+  width: 100vw;
+  .group-color {
+    width: 8px;
+    height: 100%;
+  }
+  &:hover {
+    opacity: 1;
+  }
+  &:focus {
+    .add-item {
+      opacity: 1;
+    }
+  }
+  grid-template-columns: 9.5px 1fr;
+  grid-column: 1/-1;
+  width: 100%;
+  height: 34px;
+  form {
+    height: 34px;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    justify-content: stretch;
+    .add-item-btn {
+      // display: none;
+      background-color: #0073ea;
+      color: white;
+    }
+    input {
+      padding: 0;
+      padding-left: 15px;
+      width: 100%;
+      border: #f5f6f8 solid 1px;
+      outline: none;
+    }
+  }
+}
+
+.add-item-focus {
+  opacity: 1;
+}
+
+.item-modal {
+  z-index: 200;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  width: 800px;
+  height: 70px;
+  top: 80vh;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 20px 14px rgb(0 0 0 / 5%);
+  border-radius: 10px;
+}
+
+.item-menu {
+  width: 50px;
+  position: absolute;
+  // left: 100px;
+  // background-color: chartreuse;
+}
+
+.item-menu-btn {
+  height: 23px;
+  width: 23px;
+  display: inline-block;
+  padding: 5px;
+  background-color: rgb(243, 243, 243);
+  position: relative;
+  left: -40px;
+  border-radius: 3px;
+  opacity: 0;
+}
+.el-icon-caret-bottom {
+  // padding: 5px;
+}
+
+.change-group-color {
+  height: 100px;
+  width: 100px;
+}

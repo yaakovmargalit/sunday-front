@@ -1,0 +1,39 @@
+.date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .date {
+    opacity: 1;
+    width: 200px;
+    height: 20px;
+    input {
+      padding-top: 3px;
+      margin: 0px;
+      background-color: transparent;
+      border: none;
+      text-align: center;
+      transition: none;
+      -webkit-transition: none;
+      &:hover {
+        border: 1px dashed #c4c4c4;
+      }
+    }
+    .el-icon-date{
+      display: none;
+
+    }
+    // position: absolute;
+    // top:0;
+    // left: 0;
+    // z-index: 100;
+
+    // display: grid;
+    // justify-items: center;
+    // align-items: stretch;
+  }
+  .time-to-show {
+    position: absolute;
+    padding-bottom: 8px;
+    z-index: 100;
+  }
+}

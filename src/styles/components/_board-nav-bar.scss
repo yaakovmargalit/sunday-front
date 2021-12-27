@@ -1,0 +1,125 @@
+.board-list{
+}
+.boards-nav-bar {
+    transition: width 0.2s ease-in-out;
+    position: relative;
+    width: 254px;
+    padding: 20px;
+    .toggle-board-nav-bar {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        top: 40px;
+        right: -9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 50%;
+        border: 0.7px rgb(218, 218, 218) solid;
+        cursor: pointer;
+        input {
+            cursor: pointer;
+            position: absolute;
+            opacity: 0;
+        }
+    }
+    h4 {
+        margin-bottom: 0.5rem;
+    }
+    li {
+        cursor: pointer;
+    }
+    .workspace-header {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 10px;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        i {
+            margin-right: 5px;
+        }
+        .txt {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        h4 {
+            font-weight: bold;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+    }
+}
+
+.close {
+    width: 30px !important;
+}
+
+.board-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    width: 224px;
+    padding: 5px;
+    border-radius: 7px;
+    list-style: none;
+    cursor: pointer;
+    color: $clr2;
+    .more {
+        opacity: 0;
+    }
+    h4 {
+        margin: 0;
+    }
+    .board-nav-item-title{
+        justify-content: center;
+        align-items: center;
+        i{
+            margin-top: 2px;
+            margin-right: 10px;
+        }
+    }
+    &:hover {
+        background-color: #c7c5c5;
+        .more {
+            opacity: 1;
+        }
+    }
+}
+
+.board-menu {
+    width: 200px;
+}
+
+.drop-down-btn {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.curr-btn {
+    background-color: #cce9ff;
+    &:hover{
+        background-color: #cce9ff;
+    }
+}
+
+ul {
+    list-style: none;
+    margin-block: 0;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}

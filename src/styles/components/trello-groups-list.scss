@@ -1,0 +1,45 @@
+.trello-group{
+    width: 250px;
+    margin: 10px;
+    // background-color: rgb(228, 228, 228);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebecf0;
+
+    .trello-group-top{
+        margin-block:10px ;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        &:hover{
+            .group-handle {opacity: 1;}
+        }
+        .trello-title-group{
+            margin-left: 30px;
+        }
+        .group-handle {
+            left: 4px;
+            position: absolute;
+            width: 15px;
+            padding-top: 6px;
+            cursor: move;
+            // position: absolute;
+            // display: none;
+            opacity: 0;
+            left: 10px;
+            user-drag: none;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            transition: 0.4s;
+          }
+    }
+  
+  
+}

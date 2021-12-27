@@ -1,0 +1,62 @@
+.app-home {
+  position: relative;
+  height: 100vh;
+  background-image: url(~@//assets/images/BG2.jpg);
+  //   background-image: url(../../assets/images/task.JPG);
+  object-fit: cover;
+  //   background-size: 3000px;
+  background-repeat: no-repeat;
+  background-position: center;
+  .nav-bar {
+    font-family: Opensans;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #ececee;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    gap: 30px;
+    .route-btn {
+      //   background-color: rgba(128, 128, 128, 0.239);
+      //   border-radius: 10px;
+      //   padding: 0 15px;
+
+      :hover {
+        transform: scale(1.1);
+        transition-property: transform;
+        color: #ddec98;
+        // transition-property: color;
+        transition-duration: 0.3s;
+        // background-color: rgba(128, 128, 128, 0.472);
+        // border-radius: 10px;
+        // padding: 0 15px;
+      }
+    }
+  }
+  .img-slogan{
+    // position: absolute;
+    gap: 100px;
+    top: 200px;
+    right: 100px;
+    margin: 0 200px;
+    padding-top: 200px;
+    color: honeydew;
+    span {
+      color: #ffcb00;
+    }
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
+    .logo {
+      font-size: 8rem;
+    }
+      img{
+          max-width: 500px;
+        //   height: 348px;
+        //   width: 500px;
+        //   object-fit: cover;
+      }
+  }
+}

@@ -1,0 +1,39 @@
+.sum-container {
+  height: 34px;
+  width: 200px;
+  // display: grid;
+  // grid-template-columns: minmax(320px, 1fr), repeat(6, 200px), 30px;
+  background-color: rgb(241, 241, 241);
+  align-items: center;
+  overflow: hidden;
+  .tooltip-btn {
+    height: 100%;
+    width: 100%;
+    border: unset;
+    background: transparent;
+  }
+  .tooltip {
+    //   color: transparent;
+    span {
+      height: 34px;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+  .sum-cell {
+    height: 25px;
+    &:hover {
+      cursor: pointer;
+      height: 30px;
+    }
+  }
+}
+.empty-div{
+    height: 34px;
+    width: 200px;
+}
+.empty-div-start{
+    height: 34px;
+    width: 320px;
+
+}
